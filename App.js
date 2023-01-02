@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import App from './Home';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import ListScreen from './src/screens/ListScreen';
 // export default function App() {
 //   return (
 //     <View style={styles.container}>
@@ -23,10 +24,11 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 const  navigator = createStackNavigator(
   {
-    Home:App
+    Home:App,
+    List: ListScreen
   },
   {
-    initialRouteName:'Home',
+    initialRouteName:'List',
     defaultNavigationOptions: {
       title: 'App'
     }
